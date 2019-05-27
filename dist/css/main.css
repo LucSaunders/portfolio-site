@@ -12,7 +12,8 @@ body {
     background: url(../img/computer-background.jpg);
     background-attachment: fixed;
     background-size: cover; }
-    body#bg-img .overlay {
+    body#bg-img:after {
+      content: '';
       position: absolute;
       top: 0;
       right: 0;
@@ -46,7 +47,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #4ea1b9; }
+  color: #ff7e42; }
 
 main {
   padding: 4rem;
@@ -57,7 +58,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #4ea1b9;
+        color: #ff7e42;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }

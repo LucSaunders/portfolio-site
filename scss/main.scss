@@ -1,41 +1,5 @@
-$primary-color: #3e3e3e;
-$secondary-color: #4ea1b9;
-//
-$tertiary-color: #0a57a3;
-// $subhead-color:
-$link-color: #aace49;
-// #c12c28;
-$icon-color: #e76125;
-// #aace49;
-// #eece1a;
-$show-home-image: true;
-$home-image: url(../img/computer-background.jpg);
-$background-opacity: 0.75;
-
-@mixin easeOut {
-  transition: all 0.5s ease-out;
-}
-
-@mixin background {
-  @if $show-home-image {
-    &#bg-img {
-      background: $home-image;
-      background-attachment: fixed;
-      background-size: cover;
-
-      .overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        // Set z-index farther away so text is on top of overlay
-        z-index: -1;
-        background: rgba($primary-color, $background-opacity);
-      }
-    }
-  }
-}
+// Import partial (config file) to make its variables and functions accessible
+@import 'config';
 
 // Set box model (add box-sizing property to everything) so that any padding won't affect height or width
 * {
@@ -49,10 +13,6 @@ body {
   height: 100%;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  //   'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-  // 'Lucida Sans', Arial, sans-serif;
-
-  //   'Calibri', 'Trebuchet MS', sans-serif;
   line-height: 1.5;
 }
 
