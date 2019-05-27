@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Responsive website for personal portfolio of dev projects",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Luc Saunders",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
