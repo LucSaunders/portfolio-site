@@ -1,6 +1,9 @@
 // Import partial (config file) to make its variables and functions accessible
 @import 'config';
 
+// Import menu button
+@import 'menu';
+
 // Set box model (add box-sizing property to everything) so that any padding won't affect height or width
 * {
   box-sizing: border-box;
