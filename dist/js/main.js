@@ -30,5 +30,6 @@ function toggleMenu() {
     menuBranding.classList.remove('show');
     // Loop through navItems to remove 'show' class from each
     navItems.forEach(item => item.classList.remove('show'));
+    showMenu = false;
   }
 }
