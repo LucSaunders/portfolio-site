@@ -69,7 +69,7 @@
     padding: 0;
     background: darken($primary-color, 5);
     list-style: none;
-    // Add translate3d so nav menu slides in
+    // Add translate3d stransition, start above the page
     transform: translate3d(0, -100%, 0);
     @include easeOut;
 
@@ -82,7 +82,7 @@
   // Branding-side styling
   &-branding {
     background: $primary-color; //Still see-through bc menu class has opacity specified
-    // Slide in from bottom
+    // Add translate3d transition, start below the page
     transform: translate3d(0, 100%, 0);
     @include easeOut;
 
@@ -99,5 +99,42 @@
       border-radius: 50%;
       border: solid 3px $border-color;
     }
+  }
+  .nav-item {
+    // Add translate3d transition, start off the right side of the page
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+
+    &.show {
+      // When show is applied, slide in from right
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+  // Style nav links
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    // text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: $link-color;
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: $icon-color;
+    }
+  }
+}
+
+// Create delay for each nav item by 0.1second
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
   }
 }
