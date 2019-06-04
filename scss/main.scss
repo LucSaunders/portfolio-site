@@ -1,10 +1,13 @@
-// Import partial (config file) to make its variables and functions accessible
+// Import partial config file to make its variables and functions accessible
 @import 'config';
+
+// Import partial mobile file to make its variables and functions accessible for responsiveness
+@import 'mobile';
 
 // Import menu button
 @import 'menu';
 
-// Set box model (add box-sizing property to everything) so that any padding won't affect height or width
+// Set box model (add box-sizing property to everything) so that any padding won't affect height or width)
 * {
   box-sizing: border-box;
 }
