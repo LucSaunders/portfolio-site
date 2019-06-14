@@ -1,8 +1,10 @@
 // Create a partial (config file) to store variables and functions for main.scss
 /*****************
-  COLOR VARIABLES
+  Color variables
 ******************/
 $primary-color: #3e3e3e;
+// #fff;
+
 $secondary-color: #3cd0f2;
 // #ff7e42;
 $tertiary-color: #4ea1b9;
@@ -14,15 +16,15 @@ $icon-color: #aace49;
 $border-color: #1c778c;
 // #aace49;
 
-/*****************
-  IMAGE VARIABLES
-******************/
+/******************
+  Image variables
+*******************/
 $show-home-image: true;
 $home-image: url(../img/background3.jpg);
 $background-opacity: 0.75;
 
 /**********
-  MIXINS
+  Mixins
 ***********/
 @mixin easeOut {
   transition: all 0.5s ease-out;
@@ -50,9 +52,20 @@ $background-opacity: 0.75;
     }
   }
 }
+/*--------------------
+  Set text color
+----------------------*/
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return $link-color;
+    // #000;
+  } @else {
+    @return #fff;
+  }
+}
 
 /*--------------------
-  Media Query Mixins
+  Media query mixins
 ----------------------*/
 @mixin mediaSm {
   @media screen and (max-width: 500px) {

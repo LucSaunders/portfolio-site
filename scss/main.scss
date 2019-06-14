@@ -15,7 +15,8 @@
 body {
   @include background;
   background: $primary-color;
-  color: #fff;
+  color: set-text-color($primary-color);
+  // #fff;
   height: 100%;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -72,6 +73,10 @@ main {
         @include easeOut();
       }
     }
+  }
+
+  .devicon-item {
+    font-size: 2.25rem;
   }
 
   &#home {
